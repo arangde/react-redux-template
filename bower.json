@@ -1,0 +1,26 @@
+{
+  "name": "node-seed",
+  "description": "Rubix - ReactJS Admin Template",
+  "authors": [
+    "Sketchpixy <support@sketchpixy.com>"
+  ],
+  "copyright": "SketchPixy LLP, email: support@sketchpixy.com",
+  "keywords": [
+    "rubix",
+    "admin",
+    "sketchpixy",
+    "reactjs"
+  ],
+  "homepage": "http://rubix400.sketchpixy.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "PACE": "pace#~1.0.2"
+  }
+}
