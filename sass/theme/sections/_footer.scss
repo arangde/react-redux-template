@@ -1,0 +1,21 @@
+@mixin theme-footer($list) {
+  #footer {
+    padding: 10px;
+    font-size: 12px;
+    position: relative;
+    color: get($list, footer, color);
+    background: get($list, footer, bg);
+    border-top: #F0F1F1 solid 1px;
+  }
+
+  #footer-container {
+    transition: all 0.3s ease;
+    height: 44px;
+  }
+
+  #sidebar ~ #footer-container {
+    @media (min-width: $screen-sm-min) {
+      margin-left: get($list, sidebar, width);
+    }
+  }
+}

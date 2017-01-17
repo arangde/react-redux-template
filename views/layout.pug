@@ -3,7 +3,7 @@ html.default(dir=dir)
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=Edge,chrome=1')
-    title Rubix WebApp :: Admin Template
+    title ArtTracks Front-end
 
     //- seo
     meta(name='application-name', content='Rubix')
@@ -31,8 +31,19 @@ html.default(dir=dir)
     meta(name='msapplication-TileColor', content='#E76049')
     meta(name='msapplication-TileImage', content='/favicons/mstile-144x144.png')
 
+    block pace-loader
     block header
-  body(data-version='4.0.0')
+  body.pace-big(data-version='4.0.0')
+    svg.gooey(xmlns="http://www.w3.org/2000/svg", version="1.1")
+      defs
+        filter(id="gooey")
+          feGaussianBlur(in="SourceGraphic", stdDeviation="10", result="blur")
+          feColorMatrix(in="blur", mode="matrix" ,values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7", result="goo")
+          feBlend(in="SourceGraphic", in2="goo")
+    - for (var i = 0; i < 6; i++)
+      div(class=`blob blob-${i}`)
+
     script(id='preloadedData', type='application/json')!=data
     block content
     block scripts
+    block stylesheets

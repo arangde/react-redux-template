@@ -1,5 +1,10 @@
 extends ./layout.pug
 
+//- optional (PACE loader)
+block pace-loader
+  link(rel='stylesheet', href='/css/pace.css')
+  script(type='text/javascript', src='/bower_components/PACE/pace.min.js')
+
 block header
   != app_stylesheets
 
@@ -8,3 +13,5 @@ block content
 
 block scripts
   != app_scripts
+
+block stylesheets

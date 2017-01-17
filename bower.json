@@ -1,5 +1,5 @@
 {
-  "name": "node-seed",
+  "name": "redux-example",
   "description": "Rubix - ReactJS Admin Template",
   "authors": [
     "Sketchpixy <support@sketchpixy.com>"
@@ -21,6 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "PACE": "pace#~1.0.2"
+    "PACE": "pace#~1.0.2",
+    "spectrum": "^1.8.0"
   }
 }

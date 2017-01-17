@@ -1,0 +1,58 @@
+@mixin theme-button($list) {
+  .btn {
+
+    color: get($list, components, button, color);
+    text-transform: none;
+
+    &.btn-primary {
+      color: white;
+      background: $brand-primary;
+      border-color: $brand-primary;
+      &:hover {
+        outline: none;
+        color: white;
+        background: #52caf0;
+        border-color: #52caf0;
+      }
+    }
+
+    &.btn-hollow {
+      background: transparent;
+      border: 2px solid get($list, components, button, color);
+      &:hover {
+        outline: none;
+        color: white;
+        background: #ced0d2;
+        border-color: $btn-default-color;
+      }
+    }
+
+    &.btn-primary.btn-hollow {
+      &:hover {
+        background: #52caf0;
+        border-color: #52caf0;
+      }
+    }
+
+    &.btn-link {
+      &:hover {
+          text-decoration: none !important;
+      }
+    }
+
+    &.btn-white {
+      background: white;
+      border: solid 1px #a6a6a6;
+      color: #89949B;
+      outline: none;
+      border-radius: 6px;
+      &:hover {
+        outline: none;
+        color: white;
+        background: #ced0d2;
+        border-color: $btn-default-color;
+      }
+    }
+
+  }
+}

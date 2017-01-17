@@ -1,0 +1,27 @@
+$marginMultiplier: 5px;
+
+@mixin make_margin_classes($val){
+  .mt#{$val} { margin-top: $val * $marginMultiplier; }
+  .mr#{$val} { margin-right: $val * $marginMultiplier; }
+  .mb#{$val} { margin-bottom: $val * $marginMultiplier; }
+  .ml#{$val} { margin-left: $val * $marginMultiplier; }
+
+  .mt#{$val}-imp { margin-top: ($val * $marginMultiplier) !important; }
+  .mr#{$val}-imp { margin-right: ($val * $marginMultiplier) !important; }
+  .mb#{$val}-imp { margin-bottom: ($val * $marginMultiplier) !important; }
+  .ml#{$val}-imp { margin-left: ($val * $marginMultiplier) !important; }
+  
+  .pt#{$val} { padding-top: $val * $marginMultiplier; }
+  .pr#{$val} { padding-right: $val * $marginMultiplier; }
+  .pb#{$val} { padding-bottom: $val * $marginMultiplier; }
+  .pl#{$val} { padding-left: $val * $marginMultiplier; }
+  
+  .pt#{$val}-imp { padding-top: ($val * $marginMultiplier) !important; }
+  .pr#{$val}-imp { padding-right: ($val * $marginMultiplier) !important; }
+  .pb#{$val}-imp { padding-bottom: ($val * $marginMultiplier) !important; }
+  .pl#{$val}-imp { padding-left: ($val * $marginMultiplier) !important; }
+}
+
+@for $val from 0 through 10 {
+  @include make_margin_classes($val);
+}

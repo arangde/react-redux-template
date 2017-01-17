@@ -7,6 +7,11 @@ module.exports = {
         loader: 'babel'
       },
       {
+        test: /\.txt$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'raw'
+      },
+      {
         test: /\.json$/, loader: 'json'
       },
       {

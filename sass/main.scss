@@ -17,8 +17,24 @@
 @import "fonts/ikons/ikons";
 @import "fonts/outlined/outlined";
 @import "fonts/pixelvicon/pixelvicon";
+@import "fonts/proxima/proxima";
 @import "fonts/Simple-Line-Icons/Simple-Line-Icons";
 @import "fonts/Stroke-Gap-Icons/Stroke-Gap-Icons";
 
+/* ArtTracks themes */
+@import "theme/arttracks/mixins";
+@import "theme/arttracks/global";
+@import "theme/arttracks/headers";
+@import "theme/arttracks/footer";
+@import "theme/arttracks/forms";
+@import "theme/arttracks/tables";
+@import "theme/arttracks/lists";
+@import "theme/arttracks/button";
+@import "theme/arttracks/modal";
+@import "theme/arttracks/video";
+
 /* Page styles */
 @import "pages/home";
+@import "pages/profile";
+@import "pages/project";
+@import "pages/popup";

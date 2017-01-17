@@ -1,0 +1,271 @@
+ul.folders {
+	@extend .list-unstyled;
+
+	li {
+		padding-left: 20px;
+		position: relative;
+		margin-bottom: 3px;
+
+		a {
+			color: $text-color;
+		}
+		&.active {
+			a {
+				font-weight: 700;
+			}
+		}
+		&.plain {
+			padding-left: 0;
+			&:before {
+				display: none;
+			}
+			a {
+				color: $brand-primary;
+			}
+		}
+
+		.trash-folder {
+			visibility: hidden;
+			opacity: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			transition: all 0.25s;
+		}
+
+		&:before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			font-family: 'Simple-Line-Icons';
+		    content: "\e089";
+		}
+
+		&:hover {
+			.trash-folder {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+	}
+
+}
+
+ul.filters-list {
+	@extend .list-inline;
+	font-size: 20px;
+	color: #C5C6C7;
+
+	li.active {
+		color: $brand-primary-dark;
+	}
+}
+
+ul.helpers-list {
+	@extend .list-unstyled;
+	letter-spacing: -.1px;
+
+	li.active {
+		color: $brand-primary-dark;
+	}
+}
+
+ul.videos-list {
+	@extend .list-unstyled;
+
+	.track-details {
+		color: $text-color;
+		border-bottom: rgba(0,0,0,.1) solid 2px;
+		border-top: rgba(0,0,0,.1) solid 1px;
+		&__tracks {
+			display: block;
+			font-size: 11px;
+			color: lighten($text-color,50%);
+		}
+		&__title {
+			display: inline-block;
+			width: 80%;
+			line-height: 18px;
+			margin-top: 15px;
+		}
+	}
+
+	&.thumb {
+
+		li {
+			@extend .col-xs-6;
+			@extend .col-md-4;
+			position: relative;
+			margin-bottom: $grid-sidebar-gutter-width;
+			overflow: hidden;
+
+			&:not(.plus) img.background {
+				width: 100%;
+				height: auto;
+			}
+
+			&.plus {
+				position:relative;
+				a {
+					width: 100%;
+					display: block;
+					position:relative;
+				    overflow:hidden;
+				    padding-bottom: calc(100% - 5px);
+					border: 2px dashed #DFE0E1;
+					background: #ffffff;
+					color: #DFE0E1;
+					cursor: pointer;
+					transition: color 0.5s, background 0.5s;
+					.rubix-icon {
+						position: absolute;
+						/*height: 140px;*/
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%,-50%);
+						font-size: 96px;
+						margin-top: -10px;
+					}
+					&:hover {
+						background: $brand-primary;
+						color: #ffffff;
+						border: $brand-primary solid 2px;
+					}
+				}
+			}
+
+			.track-image {
+				position:absolute;
+				width: calc(100% - 25px);
+				top: 0;
+				left: 12.5px;
+				display: block;
+				img {
+					width: 100%;
+				}
+			}
+
+			.track-details {
+				background: #ffffff;
+				position: absolute;
+				bottom: 0;
+				left: $grid-gutter-width/2;
+				width: calc(100% - #{$grid-gutter-width} + 1px);
+				height: 45%;
+				padding: $grid-gutter-width/2;
+				text-align: center;
+				color: $text-color;
+			}
+			.overlay {
+				display: none;
+				position:absolute;
+				top: 0;
+				left: 12.5px;
+				width: calc(100% - 25px);
+				height: 55%;
+				background: rgba(70, 80, 120, .9);
+
+				.btn {
+					position: absolute;
+					width: 120px;
+					height: 40px;
+					margin: 0px auto;
+					top: calc(50% - 20px);
+					left: calc(50% - 60px);
+					border-color: #52caf0;
+					font-weight: 100 !important;
+				}
+
+				a {
+					position: absolute;
+					top: 5px;
+					right: 10px;
+
+					.rubix-icon {
+						color: white;
+						font-size: 16px;
+					}
+
+				}
+
+				a:hover {
+					.rubix-icon {
+						color: $brand-primary-light;
+						font-size: 16px;
+					}
+
+				}
+			}
+
+		}
+	}
+
+}
+
+ul.pagination {
+	margin: $grid-gutter-width/2 0;
+	width: 100%;
+	text-align: center;
+	li {
+		display: inline-block;
+		border: $brand-primary-dark;
+		padding: 4px;
+
+		> a {
+			padding-left: 15px;
+			padding-right: 15px;
+			transition: all 0.5s;
+			&:hover {
+				background: #ffffff;
+				border-color: $brand-primary-dark;
+			}
+		}
+
+		&.active {
+			> a {
+				background: $brand-primary-dark;
+				&:hover, &:active, &:focus {
+					background: lighten($brand-primary-dark,10%);
+				}
+			}
+		}
+	}
+}
+
+ul.body-header__navigation {
+	@extend .list-unstyled;
+	margin-top: 0;
+	margin-bottom: 3px;
+	text-align: center;
+
+	li {
+		padding: 0 10px;
+		font-size: 12px;
+		display: inline-block;
+
+		a {
+			color: $text-color;
+			padding-bottom: 5px;
+			&:hover, &.active {
+				text-decoration: none;
+				border-bottom: 3px solid $brand-primary;
+			}
+			&.active {
+				font-weight: 700;
+				color: #000;
+			}
+		}
+
+		@media (min-width: $screen-md-min) {
+			font-size: 14px;
+			padding: 0 18px;
+		}
+
+	}
+}
+
+.track-listing {
+
+}

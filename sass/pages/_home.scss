@@ -1,31 +1,22 @@
-.todo-item {
-  border-bottom: 1px solid #eee;
-
-  button {
-    display: none;
-    margin-top: 8px;
-  }
-
-  &:hover {
-    background: rgb(254, 254, 244);
-
-    button {
-      display: inline-block;
-    }
-  }
+.has-success .help-block, .has-success .control-label {
+  color: $brand-success;
 }
 
-@media (max-width: $screen-xs-max) {
-  .todo-item {
-    .text-right {
-      display: none;
-    }
-  }
-  .todo-item:hover {
-    .text-right {
-      display: block;
-      text-align: center;
-      margin-bottom: 12.5px;
-    }
+.has-error .help-block, .has-error .control-label {
+  color: $brand-danger;
+}
+
+.header.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.alert.alert-danger {
+  border: solid 2px $brand-danger;
+  color: $brand-danger;
+}
+
+.alert-dismissable.alert-danger {
+  .close, .close:hover {
+    color: $brand-danger;
   }
 }
